@@ -2,9 +2,9 @@
 
 namespace Alqahtani\DiskMonitor\Tests;
 
+use Alqahtani\DiskMonitor\DiskMonitorServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Alqahtani\DiskMonitor\DiskMonitorServiceProvider;
 
 class TestCase extends Orchestra
 {
