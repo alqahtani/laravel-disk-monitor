@@ -12,14 +12,12 @@ class RecordDiskMetricsCommand extends Command
 
     public $description = 'Record the metrics of a disk';
 
-    public function handle(): int
+    public function handle()
     {
         collect(config('disk-monitor.disk_names'))
             ->each(fn (string $diskName) => $this->recordMetrics($diskName));
 
         $this->comment('All done!');
-
-        return self::SUCCESS;
     }
 
     protected function recordMetrics(string $diskName): void
