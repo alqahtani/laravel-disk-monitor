@@ -2,9 +2,9 @@
 
 namespace Alqahtani\DiskMonitor\Commands;
 
+use Alqahtani\DiskMonitor\Models\DiskMonitorEntry;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Alqahtani\DiskMonitor\Models\DiskMonitorEntry;
 
 class RecordDiskMetricsCommand extends Command
 {

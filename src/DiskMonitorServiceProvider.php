@@ -2,9 +2,9 @@
 
 namespace Alqahtani\DiskMonitor;
 
+use Alqahtani\DiskMonitor\Commands\RecordDiskMetricsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Alqahtani\DiskMonitor\Commands\RecordDiskMetricsCommand;
 
 class DiskMonitorServiceProvider extends PackageServiceProvider
 {
