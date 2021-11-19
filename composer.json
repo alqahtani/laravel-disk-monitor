@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "alqahtani/laravel-disk-monitor",
+    "description": "Monitor mertics of Laravel disks",
     "keywords": [
-        ":vendor_name",
+        "alqahtani",
         "laravel",
-        ":package_slug"
+        "laravel-disk-monitor"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/alqahtani/laravel-disk-monitor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Ahmed AlQahtani",
+            "email": "alq.ahmad@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Alqahtani\\DiskMonitor\\": "src",
+            "Alqahtani\\DiskMonitor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Alqahtani\\DiskMonitor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Alqahtani\\DiskMonitor\\DiskMonitorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "DiskMonitor": "Alqahtani\\DiskMonitor\\Facades\\DiskMonitor"
             }
         }
     },
