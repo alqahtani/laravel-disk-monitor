@@ -5,8 +5,8 @@ use Alqahtani\DiskMonitor\Models\DiskMonitorEntry;
 use Illuminate\Support\Facades\Storage;
 
 use function Pest\Laravel\artisan;
-use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertCount;
+use function PHPUnit\Framework\assertEquals;
 
 it('will record the file count for a single disk', function () {
     artisan(RecordDiskMetricsCommand::class)->assertExitCode(0);
@@ -20,7 +20,6 @@ it('will record the file count for a single disk', function () {
 });
 
 it('will record the file count for multiple disks', function () {
-
     config()->set('disk-monitor.disk_names', ['local', 'anotherDisk']);
     Storage::disk('anotherDisk')->put('test.txt', 'test');
 

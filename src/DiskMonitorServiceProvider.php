@@ -2,11 +2,11 @@
 
 namespace Alqahtani\DiskMonitor;
 
+use Alqahtani\DiskMonitor\Commands\RecordDiskMetricsCommand;
+use Alqahtani\DiskMonitor\Http\Controllers\DiskMetricsController;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Alqahtani\DiskMonitor\Commands\RecordDiskMetricsCommand;
-use Alqahtani\DiskMonitor\Http\Controllers\DiskMetricsController;
 
 class DiskMonitorServiceProvider extends PackageServiceProvider
 {
@@ -27,8 +27,8 @@ class DiskMonitorServiceProvider extends PackageServiceProvider
 
     public function packageRegistered()
     {
-        Route::macro('diskMonitor', function(string $prefix = 'disk-monitor') {
-            Route::prefix($prefix)->group(function() {
+        Route::macro('diskMonitor', function (string $prefix = 'disk-monitor') {
+            Route::prefix($prefix)->group(function () {
                 Route::get('/', DiskMetricsController::class);
             });
         });
