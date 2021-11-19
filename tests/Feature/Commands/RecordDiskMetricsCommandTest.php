@@ -6,13 +6,9 @@ use Illuminate\Support\Facades\Storage;
 
 use function Pest\Laravel\artisan;
 use function PHPUnit\Framework\assertEquals;
+use function PHPUnit\Framework\assertCount;
 
-<<<<<<< HEAD
-it('will record the file count for a disk', function () {
-=======
 it('will record the file count for a single disk', function () {
-
->>>>>>> 98aff87 (a lot of work)
     artisan(RecordDiskMetricsCommand::class)->assertExitCode(0);
     $entry = DiskMonitorEntry::last();
     assertEquals(0, $entry->file_count);
