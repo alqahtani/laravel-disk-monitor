@@ -2,9 +2,9 @@
 
 namespace Alqahtani\DiskMonitor;
 
-use Alqahtani\DiskMonitor\Commands\DiskMonitorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Alqahtani\DiskMonitor\Commands\RecordDiskMetricsCommand;
 
 class DiskMonitorServiceProvider extends PackageServiceProvider
 {
@@ -20,6 +20,6 @@ class DiskMonitorServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_disk_monitor_table')
-            ->hasCommand(DiskMonitorCommand::class);
+            ->hasCommand(RecordDiskMetricsCommand::class);
     }
 }
